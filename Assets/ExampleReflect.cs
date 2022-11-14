@@ -43,7 +43,7 @@ public class ExampleReflect : MonoBehaviour
 
             Debug.Log($"ray-{hit.transform.gameObject.tag}");
             // 反射先
-            Ray ray2 = new Ray(reflectVec, transform.forward);
+            Ray ray2 = new Ray(hit.point, reflectVec);
             if (Physics.Raycast(ray2, out hit, MaxDistance))
             {
                 Debug.Log($"ray2-{hit.transform.gameObject.tag}");
